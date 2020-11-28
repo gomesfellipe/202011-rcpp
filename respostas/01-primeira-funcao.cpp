@@ -13,20 +13,19 @@ soma_n <- function(n) {
 soma_n(10)
 */
 
-#include <Rcpp.h>
+#include<Rcpp.h>
 using namespace Rcpp;
-
 // [[Rcpp::export]]
-int soma_ncpp(int n) {
+int cpp_soma_n (int n)
+{
   int total = 0;
-  
-  for (int i = 1; i <= n; i++) {
+  for (int i = 1; i <= n; i++)
+  {
     total = total + i;
   }
-  
   return total;
 }
 
 /*** R
-soma_ncpp(10)
+cpp_soma_n(10)
 */
